@@ -1,0 +1,10 @@
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\bin\Debug\01_GameConsoleApp.exe.config
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\bin\Debug\01_GameConsoleApp.exe
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\bin\Debug\01_GameConsoleApp.pdb
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\bin\Debug\02_GameLibrary.dll
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\bin\Debug\02_GameLibrary.pdb
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\obj\Debug\01_GameConsoleApp.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\obj\Debug\01_GameConsoleApp.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\obj\Debug\01_GameConsoleApp.csproj.CopyComplete
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\obj\Debug\01_GameConsoleApp.exe
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\01_GameConsoleApp\obj\Debug\01_GameConsoleApp.pdb

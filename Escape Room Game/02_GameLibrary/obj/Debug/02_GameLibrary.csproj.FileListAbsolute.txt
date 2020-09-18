@@ -1,0 +1,6 @@
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\02_GameLibrary\bin\Debug\02_GameLibrary.dll
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\02_GameLibrary\bin\Debug\02_GameLibrary.pdb
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\02_GameLibrary\obj\Debug\02_GameLibrary.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\02_GameLibrary\obj\Debug\02_GameLibrary.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\02_GameLibrary\obj\Debug\02_GameLibrary.dll
+C:\ElevenFiftyProjects\01_GoldBadge\03_Class_Projects\Pair Console Game\Escape Room Game\02_GameLibrary\obj\Debug\02_GameLibrary.pdb
