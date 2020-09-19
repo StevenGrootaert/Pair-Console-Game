@@ -12,19 +12,21 @@ namespace _01_GameConsoleApp
     public class ProgramUI
     {
         private Game_Repo _playerPocket = new Game_Repo();
-        public void Run()      // creating the entry
+        private Player01 _playerName = new Player01();
+        public void Run()      // creating the entry point
         {
             GameContent();
         }
         public void GameContent()
         {   // create player name
             Console.WriteLine("Welcome player! What is your name?");
-            string playerName = Console.ReadLine();     // make sure to keep using playerName in PlayerClass and PlayerRepo. Add capitol first letter?
+            _playerName.Player01Name = _playerPocket.GetPlayerName();
+            //_playerPocket.AddItemToPocket(playerName); // just a test to see if we can get something to be put into the class repo. 
             Console.Clear();
             // intro
-            Console.WriteLine($"{playerName}, you just woke up in this strange room. You don't know where you are but\n" +
+            Console.WriteLine($"{_playerName.Player01Name}, you just woke up in this strange room. You don't know where you are but\n" +
                 "what's important is that you find a way to escape. Search the room for things to help\n" +
-                $"you break out. Type a number to choose a senario for the path you will take. Good luck {playerName}.\n");
+                $"you break out. Type a number to choose a senario for the path you will take. Good luck {_playerName.Player01Name}.\n");
 
             bool keepRunning = true;
             while (keepRunning)
@@ -72,11 +74,17 @@ namespace _01_GameConsoleApp
         }
 
 
+        //public string GetPlayerName()
+        //{
+        //    string playerName = Console.ReadLine();
+        //    return playerName;
+        //}
         public void KeyUnderFloor()
         {
             Console.Clear();
             Console.WriteLine("Scrutinizing the floor, you notice some boards of wood are bent and loose. Prying one up,\n" +
                     "you find a key underneath. The key is now in your pocket. Press enter to continue.\n");
+
             Console.ReadLine();
             Console.Clear();
             KeyInPocket();
@@ -191,7 +199,8 @@ namespace _01_GameConsoleApp
                 "To your relief there are no other locks or chains keeping the door bolted.\n" +
                 "You take off in a sprint down the hall and exit the building.\n" +
                 "\n" +
-                "Congratulations! You escaped! The game will now exit. Reload to play again and find another way out!");
+                $"Congratulations {_playerName.Player01Name} ! You escaped! The game will now exit. Reload to play again and find another way out!");
+            
             Console.ReadLine();
         }
 

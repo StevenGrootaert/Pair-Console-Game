@@ -19,6 +19,13 @@ namespace _02_GameLibrary
             _playerPocket.PlayerPocket.Add(item); // item is a parameter of Player01 so how do we add other items to Player01 List?? whatever we call item is added to list
         }
 
+        public string GetPlayerName()
+        {
+            string name = Console.ReadLine();
+            return name;
+            //_playerPocket.Player01Name = Console.ReadLine();
+        }
+
         // ----- READ -----
         public List<string> ListAllPocketItems()
         {
