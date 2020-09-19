@@ -13,7 +13,7 @@ namespace _01_GameConsoleApp
     {
         private Game_Repo _playerPocket = new Game_Repo();
         private Player01 _playerName = new Player01();
-        public void Run()      // creating the entry point
+        public void Run()      // the entry point
         {
             GameContent();
         }
@@ -21,7 +21,7 @@ namespace _01_GameConsoleApp
         {   // create player name
             Console.WriteLine("Welcome player! What is your name?");
             _playerName.Player01Name = _playerPocket.GetPlayerName();
-            //_playerPocket.AddItemToPocket(playerName); // just a test to see if we can get something to be put into the class repo. 
+
             Console.Clear();
             // intro
             Console.WriteLine($"{_playerName.Player01Name}, you just woke up in this strange room. You don't know where you are but\n" +
@@ -38,9 +38,7 @@ namespace _01_GameConsoleApp
                     "4) Scream for help\n" +
                     "5) Inspect the floorboards");
 
-                // Get the user's input
                 string input = Console.ReadLine();
-                // Evaluate the user's input and act accordingly
                 switch (input)
                 {
                     case "1":
@@ -62,23 +60,16 @@ namespace _01_GameConsoleApp
                         break;
                     case "5":
                         KeyUnderFloor();
-                        //Console.WriteLine("You Escaped!! -- Thanks for playing!!");
-                        //Console.ReadKey();
                         keepRunning = false;
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("Please enter a valid number in order to continue the story. \n");
                         break;
                 }
             }
         }
 
-
-        //public string GetPlayerName()
-        //{
-        //    string playerName = Console.ReadLine();
-        //    return playerName;
-        //}
         public void KeyUnderFloor()
         {
             Console.Clear();
@@ -86,7 +77,6 @@ namespace _01_GameConsoleApp
                     "you find a key underneath. The key is now in your pocket. Press enter to continue.\n");
 
             Console.ReadLine();
-            Console.Clear();
             KeyInPocket();
         }
 
@@ -98,41 +88,37 @@ namespace _01_GameConsoleApp
                 Console.WriteLine
                     ("1) Try the key in the door\n" +
                     "2) Keep looking around the room\n");
-                //"3) Use the key somehow");
 
                 string input = Console.ReadLine();
                 switch (input)
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine("The key doesn't fit. \n probably another key would fit? try another option... \n");
+                        Console.WriteLine("The key doesn't fit. \n Probably another key would fit? Try another option.. \n");
                         break;
                     case "2":
                         Console.Clear();
                         PictureFrame();
                         keepRunning = false;
                         break;
-                    //case "3":
-                    // Console.Clear():
-                    // UseKeyToDoSomething(); like scrape away a scratch off
+                    
                     default:
+                        Console.Clear();
                         Console.WriteLine("Please enter a valid number in order to continue the story. \n");
                         break;
                 }
             }
-            //Console.WriteLine("You take the key to the door and unlock it... good job.\n");
-            //Console.ReadLine();
         }
 
         public void PictureFrame()
         {
             Console.Clear();
             Console.WriteLine("You notice one of the picture frames on the wall is not level.\n" +
-                "You go to inspect the frame and notice that there is a small safe behind it \n");
+                "You go to inspect the frame and notice that there is a small safe behind it. \n");
             bool keepRunning = true;
             while (keepRunning)
             {
-                Console.WriteLine
+                Console.WriteLine       // keeps looping here forever!?!?
                     ("1) Try to force the safe open\n" +
                     "2) Enter a combination\n" +
                     "3) Go back to the box with magazines in it\n");
@@ -142,8 +128,8 @@ namespace _01_GameConsoleApp
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine("If you can force open a safe you probably could just bust out of the room.\n" +
-                            " - try another option... press enter to continue \n");
+                        Console.WriteLine($"{ _playerName.Player01Name} - If you can force open a safe you probably could just bust out of the room.\n" +
+                            " - try another option... Press enter to continue. \n");
                         break;
                     case "2":
                         Console.Clear();
@@ -153,19 +139,21 @@ namespace _01_GameConsoleApp
                     case "3":
                         Console.Clear();
                         GoBackToBox();
+                        keepRunning = false;        //HERE IT IS!!! 
+                        
                         break;
                     case "TK-421": //SKIP to the end
                         Console.Clear();
-                        Console.WriteLine("you WIN!!! aghagahga");
+                        Console.WriteLine($"{_playerName.Player01Name} you WIN!!! aghagahga");
                         Console.ReadLine();
                         keepRunning = false;
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("Please enter a valid number in order to continue the story. \n");
                         break;
                 }
                 Console.ReadLine();
-                //Console.Clear();
             }
         }
 
@@ -185,9 +173,11 @@ namespace _01_GameConsoleApp
                     KeyInHand();
                     break;
                 default:
+                    Console.Clear();
                     Console.WriteLine("You spin the dial back and forth entering what you think is the combination... \n" +
-                        "you turn the handle and it doesn't budge. \n");
-                   
+                        "you turn the handle and it doesn't budge. Press enter to continue. \n");
+                    Console.ReadLine();
+                    PictureFrame();
                     break;
             }
         }
@@ -195,12 +185,11 @@ namespace _01_GameConsoleApp
         public void KeyInHand()
         {
             Console.Clear();
-            Console.WriteLine("The key is old fashioned and rusty but it fits perfectly in the door's keyhole.\n" +
+            Console.WriteLine("Upon opening the safe you find an old fashioned key. It's rusty but it fits perfectly in the door's keyhole.\n" +
                 "To your relief there are no other locks or chains keeping the door bolted.\n" +
                 "You take off in a sprint down the hall and exit the building.\n" +
                 "\n" +
-                $"Congratulations {_playerName.Player01Name} ! You escaped! The game will now exit. Reload to play again and find another way out!");
-            
+                $"Congratulations {_playerName.Player01Name} ! You escaped!\n");
             Console.ReadLine();
         }
 
@@ -235,29 +224,25 @@ namespace _01_GameConsoleApp
                         Console.Clear();
                         Console.WriteLine("You don't know how long you've been trapped in this room but you are certainly\n" +
                             "hungry and a bit delusional. You swallow the small key and -- CHOKE!!!\n" +
-                            "Thankfully you spit up the key. You could have died! Try something else, silly.\n");
+                            $"Thankfully you spit up the key. You could have died!\n" +
+                            $"Try something else, {_playerName.Player01Name}.\n");
                         break;
                     default:
+                        Console.Clear();
                         Console.WriteLine("Please enter a valid number in order to continue the story. \n");
                         break;
 
                 }
             }
-
-            //  more organic way to go back to picture frame?? 
-            //Console.ReadLine();
-            //  go back to the picture frame
-            //PictureFrame();
         }
-
 
         void OpenDiary()
         {
             Console.Clear();
             Console.WriteLine("You use the key to open the diary... \n" +
                 "All the pages are blank except for one... in blood you find written \n" +
-                "Four Two One \n" +
-                "You think to yourself that these numbers might be used somewhere... press enter to contiune.");
+                "       Four    Two     One \n" +
+                "You think to yourself that these numbers might be used somewhere... Press enter to contiune.");
             Console.ReadLine();
             Console.Clear();
             bool keepRunning = true;
@@ -278,12 +263,12 @@ namespace _01_GameConsoleApp
                         break;
                     case "2":
                         Console.Clear();
-                        Console.WriteLine("Snap out of it - you've got to get out! \n");
+                        Console.WriteLine($"Snap out of it {_playerName.Player01Name} - you've got to get out! \n");
                         
                         break;
                     case "3":
                         Console.Clear();
-                        Console.WriteLine("This isn't the time for a nap - you've got to get free! \n");
+                        Console.WriteLine($"This isn't the time for a nap {_playerName.Player01Name} - you've got to get free! \n");
                         break;
                     default:
                         Console.Clear();
@@ -293,8 +278,6 @@ namespace _01_GameConsoleApp
 
             }
         }
-
-
     }
 
 
